@@ -17,6 +17,6 @@ for MACHINE in $MACHINES
 do
    TOTAL=$(sshpass -p $PASS ssh -o StrictHostKeyChecking=no $USER@$MACHINE sudo docker ps | grep $CONTAINER | wc -l)
    if [ $TOTAL == 1 ]; then
-    echo "Container $CONTAINER na maquina $MACHINE"
+    echo "Container $CONTAINER esta na maquina $MACHINE"
    fi
 done
